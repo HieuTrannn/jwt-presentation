@@ -100,44 +100,50 @@ export default function ByteByteGoPresentation() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">JWT Authentication Flow</h2>
             <p className="text-slate-400 text-lg">Complete request-response cycle with JWT tokens</p>
           </div>
-
           <div className="byte-card-large">
             <JwtFlowDiagram />
           </div>
-
+          // text-blue-400 text-green-400 text-orange-400 text-purple-400
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-            <div className="byte-card border-l-4 border-blue-500">
-              <div className="flex items-start gap-3">
-                <span className="text-2xl font-bold text-blue-400">①</span>
-                <div>
-                  <h4 className="font-semibold text-blue-400 mb-1">Login Request</h4>
-                  <p className="text-sm text-slate-400">Client sends username & password to Auth Server</p>
-                </div>
-              </div>
-            </div>
             <div className="byte-card border-l-4 border-green-500">
               <div className="flex items-start gap-3">
-                <span className="text-2xl font-bold text-green-400">②③</span>
+                <span className="text-2xl font-bold text-green-400">①</span>
                 <div>
-                  <h4 className="font-semibold text-green-400 mb-1">Validation</h4>
-                  <p className="text-sm text-slate-400">Auth Server validates credentials with Database</p>
-                </div>
-              </div>
-            </div>
-            <div className="byte-card border-l-4 border-orange-500">
-              <div className="flex items-start gap-3">
-                <span className="text-2xl font-bold text-orange-400">④</span>
-                <div>
-                  <h4 className="font-semibold text-orange-400 mb-1">Generate JWT</h4>
-                  <p className="text-sm text-slate-400">Server creates and returns signed JWT token</p>
+                  <h4 className="font-semibold text-green-400 mb-1">Login Request</h4>
+                  <p className="text-sm text-slate-400">Client sends username & password to Auth Server</p>
                 </div>
               </div>
             </div>
             <div className="byte-card border-l-4 border-purple-500">
               <div className="flex items-start gap-3">
-                <span className="text-2xl font-bold text-purple-400">⑤⑥⑦</span>
+                <div className="flex items-start">
+                  <span className="text-2xl font-bold text-green-400">②</span>
+                  <span className="text-2xl font-bold text-purple-400">③</span>
+                </div>
                 <div>
-                  <h4 className="font-semibold text-purple-400 mb-1">API Access</h4>
+                  <h4 className="font-semibold text-purple-400 mb-1">Validation</h4>
+                  <p className="text-sm text-slate-400">Auth Server validates credentials with Database</p>
+                </div>
+              </div>
+            </div>
+            <div className="byte-card border-l-4 border-blue-500">
+              <div className="flex items-start gap-3">
+                <span className="text-2xl font-bold text-blue-400">④</span>
+                <div>
+                  <h4 className="font-semibold text-blue-400 mb-1">Generate JWT</h4>
+                  <p className="text-sm text-slate-400">Server creates and returns signed JWT token</p>
+                </div>
+              </div>
+            </div>
+            <div className="byte-card border-l-4 border-orange-500">
+              <div className="flex items-start gap-3">
+                <div className="flex items-start">
+                  <span className="text-2xl font-bold text-orange-400">⑤</span>
+                  <span className="text-2xl font-bold text-green-400">⑥</span>
+                  <span className="text-2xl font-bold text-green-400">⑦</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-orange-400 mb-1">API Access</h4>
                   <p className="text-sm text-slate-400">Client uses JWT to access protected resources</p>
                 </div>
               </div>
