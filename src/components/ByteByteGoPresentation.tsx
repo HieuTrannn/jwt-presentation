@@ -55,13 +55,13 @@ export default function ByteByteGoPresentation() {
         {/* ===== HERO ===== */}
         <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-slate-900 to-green-900/20" />
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-20 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
-            <div className="absolute bottom-20 right-20 w-96 h-96 bg-green-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
-            <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-purple-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }} />
+          <div className="absolute inset-0 hidden sm:block">
+            <div className="absolute top-20 left-10 sm:left-20 w-40 sm:w-64 h-40 sm:h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
+            <div className="absolute bottom-20 right-10 sm:right-20 w-48 sm:w-96 h-48 sm:h-96 bg-green-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
+            <div className="absolute top-1/2 left-1/2 w-36 sm:w-72 h-36 sm:h-72 bg-purple-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }} />
           </div>
 
-          <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
+          <div className="relative z-10 text-center px-4 sm:px-6 max-w-5xl mx-auto">
             <ScrollReveal>
               <div className="inline-block px-4 py-2 mb-6 rounded-full bg-blue-500/20 border border-blue-500/30">
                 <span className="text-blue-400 text-sm font-semibold">Chapter 06 — RESTful Web Service Security</span>
@@ -69,16 +69,16 @@ export default function ByteByteGoPresentation() {
             </ScrollReveal>
 
             <ScrollReveal delay={100}>
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 text-transparent bg-clip-text leading-tight">
+              <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 text-transparent bg-clip-text leading-tight">
                 JWT Authentication
               </h1>
             </ScrollReveal>
 
             <ScrollReveal delay={200}>
-              <p className="text-xl md:text-2xl text-slate-300 mb-4 leading-relaxed">
+              <p className="text-base sm:text-xl md:text-2xl text-slate-300 mb-4 leading-relaxed">
                 Interactive Learning Platform for JWT Authentication
               </p>
-              <p className="text-sm text-slate-500 mb-8">⏱️ ~15 phút · ⌨️ Dùng J/K để navigate · 🧪 Có Quiz kiểm tra kiến thức</p>
+              <p className="text-xs sm:text-sm text-slate-500 mb-6 sm:mb-8">⏱️ ~15 phút · ⌨️ Dùng J/K để navigate · 🧪 Có Quiz kiểm tra kiến thức</p>
             </ScrollReveal>
 
             <ScrollReveal delay={300}>
@@ -106,7 +106,7 @@ export default function ByteByteGoPresentation() {
         </section>
 
         {/* ===== JWT AUTHENTICATION FLOW ===== */}
-        <section id="jwt-flow" className="py-24 px-6">
+        <section id="jwt-flow" className="py-16 sm:py-24 px-3 sm:px-6">
           <div className="max-w-7xl mx-auto">
             <ScrollReveal>
               <div className="section-header">
@@ -133,7 +133,7 @@ export default function ByteByteGoPresentation() {
         </section>
 
         {/* ===== JWT DECODER ===== */}
-        <section id="jwt-decoder" className="py-24 px-6 bg-slate-900/50">
+        <section id="jwt-decoder" className="py-16 sm:py-24 px-3 sm:px-6 bg-slate-900/50">
           <div className="max-w-7xl mx-auto">
             <ScrollReveal>
               <div className="section-header">
@@ -163,7 +163,7 @@ export default function ByteByteGoPresentation() {
         </section>
 
         {/* ===== JWT STRUCTURE ===== */}
-        <section id="jwt-structure" className="py-24 px-6">
+        <section id="jwt-structure" className="py-16 sm:py-24 px-3 sm:px-6">
           <div className="max-w-7xl mx-auto">
             <ScrollReveal>
               <div className="section-header">
@@ -241,7 +241,7 @@ export default function ByteByteGoPresentation() {
         </section>
 
         {/* ===== AUTH VS AUTHZ ===== */}
-        <section id="auth-vs-authz" className="py-24 px-6 bg-slate-900/50">
+        <section id="auth-vs-authz" className="py-16 sm:py-24 px-3 sm:px-6 bg-slate-900/50">
           <div className="max-w-7xl mx-auto">
             <ScrollReveal>
               <div className="section-header">
@@ -257,7 +257,7 @@ export default function ByteByteGoPresentation() {
         </section>
 
         {/* ===== JWT VS SESSION ===== */}
-        <section id="jwt-vs-session" className="py-24 px-6">
+        <section id="jwt-vs-session" className="py-16 sm:py-24 px-3 sm:px-6">
           <div className="max-w-7xl mx-auto">
             <ScrollReveal>
               <div className="section-header">
@@ -322,7 +322,7 @@ export default function ByteByteGoPresentation() {
         </section>
 
         {/* ===== ALGORITHMS ===== */}
-        <section id="algorithms" className="py-24 px-6 bg-slate-900/50">
+        <section id="algorithms" className="py-16 sm:py-24 px-3 sm:px-6 bg-slate-900/50">
           <div className="max-w-7xl mx-auto">
             <ScrollReveal>
               <div className="section-header">
@@ -338,7 +338,7 @@ export default function ByteByteGoPresentation() {
         </section>
 
         {/* ===== REFRESH TOKEN ===== */}
-        <section id="refresh-token" className="py-24 px-6">
+        <section id="refresh-token" className="py-16 sm:py-24 px-3 sm:px-6">
           <div className="max-w-7xl mx-auto">
             <ScrollReveal>
               <div className="section-header">
@@ -380,7 +380,7 @@ export default function ByteByteGoPresentation() {
         </section>
 
         {/* ===== TOKEN LIFECYCLE ===== */}
-        <section id="token-lifecycle" className="py-24 px-6 bg-slate-900/50">
+        <section id="token-lifecycle" className="py-16 sm:py-24 px-3 sm:px-6 bg-slate-900/50">
           <div className="max-w-7xl mx-auto">
             <ScrollReveal>
               <div className="section-header">
@@ -396,7 +396,7 @@ export default function ByteByteGoPresentation() {
         </section>
 
         {/* ===== BEST PRACTICES ===== */}
-        <section id="best-practices" className="py-24 px-6">
+        <section id="best-practices" className="py-16 sm:py-24 px-3 sm:px-6">
           <div className="max-w-7xl mx-auto">
             <ScrollReveal>
               <div className="section-header">
@@ -437,7 +437,7 @@ export default function ByteByteGoPresentation() {
         </section>
 
         {/* ===== VULNERABILITIES & ATTACKS ===== */}
-        <section id="vulnerabilities" className="py-24 px-6 bg-slate-900/50">
+        <section id="vulnerabilities" className="py-16 sm:py-24 px-3 sm:px-6 bg-slate-900/50">
           <div className="max-w-7xl mx-auto">
             <ScrollReveal>
               <div className="section-header">
@@ -453,7 +453,7 @@ export default function ByteByteGoPresentation() {
         </section>
 
         {/* ===== IMPLEMENTATION / CODE PLAYGROUND ===== */}
-        <section id="implementation" className="py-24 px-6">
+        <section id="implementation" className="py-16 sm:py-24 px-3 sm:px-6">
           <div className="max-w-7xl mx-auto">
             <ScrollReveal>
               <div className="section-header">
@@ -469,7 +469,7 @@ export default function ByteByteGoPresentation() {
         </section>
 
         {/* ===== AUTH METHODS COMPARISON ===== */}
-        <section id="comparison" className="py-24 px-6 bg-slate-900/50">
+        <section id="comparison" className="py-16 sm:py-24 px-3 sm:px-6 bg-slate-900/50">
           <div className="max-w-7xl mx-auto">
             <ScrollReveal>
               <div className="section-header">
@@ -487,7 +487,7 @@ export default function ByteByteGoPresentation() {
         </section>
 
         {/* ===== GLOSSARY ===== */}
-        <section id="glossary" className="py-24 px-6">
+        <section id="glossary" className="py-16 sm:py-24 px-3 sm:px-6">
           <div className="max-w-7xl mx-auto">
             <ScrollReveal>
               <div className="section-header">
@@ -503,7 +503,7 @@ export default function ByteByteGoPresentation() {
         </section>
 
         {/* ===== QUIZ ===== */}
-        <section id="quiz" className="py-24 px-6 bg-slate-900/50">
+        <section id="quiz" className="py-16 sm:py-24 px-3 sm:px-6 bg-slate-900/50">
           <div className="max-w-7xl mx-auto">
             <ScrollReveal>
               <div className="section-header">
@@ -519,7 +519,7 @@ export default function ByteByteGoPresentation() {
         </section>
 
         {/* ===== VIDEO ===== */}
-        <section id="video" className="py-24 px-6">
+        <section id="video" className="py-16 sm:py-24 px-3 sm:px-6">
           <div className="max-w-7xl mx-auto">
             <ScrollReveal>
               <div className="section-header">
@@ -562,10 +562,10 @@ export default function ByteByteGoPresentation() {
         </section>
 
         {/* ===== FOOTER ===== */}
-        <footer className="py-16 px-6 border-t border-slate-800">
-          <div className="max-w-7xl mx-auto text-center space-y-6">
-            <h3 className="text-3xl font-bold text-white">Thank You</h3>
-            <p className="text-xl text-slate-400">Chapter 06 — JWT Authentication Flow</p>
+        <footer className="py-10 sm:py-16 px-3 sm:px-6 border-t border-slate-800">
+          <div className="max-w-7xl mx-auto text-center space-y-4 sm:space-y-6">
+            <h3 className="text-2xl sm:text-3xl font-bold text-white">Thank You</h3>
+            <p className="text-base sm:text-xl text-slate-400">Chapter 06 — JWT Authentication Flow</p>
             <p className="text-slate-500">Implement Security in RESTful Web Service • PRN232</p>
             <div className="flex flex-wrap gap-4 justify-center items-center text-sm text-slate-600 pt-8">
               <span>Diagram Style: ByteByteGo</span>
