@@ -4,7 +4,6 @@ import { useEffect, useMemo, useState } from "react";
 import type { ChatMessage, ChatSettings } from "../types/chat";
 import { chatStorage } from "../lib/storage/chatStorage";
 import { GeminiDirectProvider } from "../lib/ai/geminiDirect";
-import { FirebaseAiLogicProvider } from "../lib/ai/firebaseAiLogic";
 
 const starterQuestions = [
   "JWT là gì và hoạt động như thế nào?",
@@ -20,7 +19,7 @@ function createId() {
 }
 
 const defaultSettings: ChatSettings = {
-  provider: "firebase-ai-logic",
+  provider: "gemini-direct",
   model: "gemini-2.5-flash-lite",
   persistHistory: true,
   maxContextMessages: 8,
@@ -58,11 +57,8 @@ export default function JwtTutorChatbot() {
   }, [settings]);
 
   const provider = useMemo(() => {
-    if (settings.provider === "firebase-ai-logic") {
-      return new FirebaseAiLogicProvider();
-    }
     return new GeminiDirectProvider();
-  }, [settings.provider]);
+  }, []);
 
   async function handleSend(customText?: string) {
     const text = (customText ?? input).trim();
@@ -133,19 +129,6 @@ export default function JwtTutorChatbot() {
         </div>
 
         <div className="jwt-chatbot__actions">
-          <select
-            className="jwt-chatbot__button"
-            value={settings.provider}
-            onChange={(e) =>
-              setSettings((prev) => ({
-                ...prev,
-                provider: e.target.value as ChatSettings["provider"],
-              }))
-            }
-          >
-            <option value="firebase-ai-logic">Firebase AI Logic</option>
-            <option value="gemini-direct">Gemini Direct</option>
-          </select>
           <button onClick={exportChat} className="jwt-chatbot__button">
             Export
           </button>

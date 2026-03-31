@@ -8,7 +8,7 @@ export interface ChatMessage {
 }
 
 export interface ChatSettings {
-  provider: "firebase-ai-logic" | "gemini-direct";
+  provider: "gemini-direct";
   model: string;
   persistHistory: boolean;
   maxContextMessages: number;
