@@ -11,6 +11,7 @@ import JwtFlowDiagram from "./JwtFlowDiagram";
 import JwtStructureDiagram from "./JwtStructureDiagram";
 import JwtVsSessionDiagram from "./JwtVsSessionDiagram";
 import RefreshTokenFlowDiagram from "./RefreshTokenFlowDiagram";
+import JwtTutorChatbot from "./JwtTutorChatbot";
 
 export default function ByteByteGoPresentation() {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -103,7 +104,6 @@ export default function ByteByteGoPresentation() {
           <div className="byte-card-large">
             <JwtFlowDiagram />
           </div>
-          // text-blue-400 text-green-400 text-orange-400 text-purple-400
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
             <div className="byte-card border-l-4 border-green-500">
               <div className="flex items-start gap-3">
@@ -149,6 +149,9 @@ export default function ByteByteGoPresentation() {
               </div>
             </div>
           </div>
+
+          {/* JWT Tutor Bot */}
+          <JwtTutorChatbot />
         </div>
       </section>
 
