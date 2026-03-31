@@ -599,6 +599,157 @@ html { scroll-behavior: smooth; }
   @apply absolute top-0 left-0 w-full h-full border-0 rounded-xl;
 }
 
+/* =================================================================
+   RESPONSIVE — Mobile-first media queries
+   ================================================================= */
+
+/* ─── Small phones (< 380px) ─── */
+@media (max-width: 379px) {
+  .section-title { font-size: 1.5rem !important; }
+  .section-subtitle { font-size: 0.8rem; }
+  .section-header { @apply mb-8; }
+  .byte-card { @apply p-3; }
+  .byte-card-large { @apply p-4; }
+
+  .flow-anim__controls { gap: 0.25rem; }
+  .flow-anim__btn { @apply px-2 py-1.5 text-xs; }
+  .flow-anim__progress-dot { @apply w-6 h-6 text-[9px]; }
+  .flow-anim__timeline-label { max-width: 45px; font-size: 8px; }
+  .flow-anim__timeline-number { @apply w-5 h-5 text-[8px]; }
+  .flow-anim__detail { @apply p-3; }
+  .flow-anim__arrow-label { font-size: 0.7rem; }
+  .flow-anim__http pre { @apply text-xs; }
+
+  .lifecycle__node-circle { @apply w-9 h-9 text-sm; }
+  .lifecycle__node-label { font-size: 8px; max-width: 55px; }
+  .lifecycle__connector { @apply w-4; }
+
+  .quiz__option { @apply p-3 gap-2; }
+  .quiz__option-letter { @apply w-7 h-7 text-xs; }
+
+  .code-playground__lang { @apply px-2 py-1.5 text-xs gap-1; }
+  .code-playground__pre { @apply p-2; }
+  .code-playground__pre code { font-size: 0.7rem; }
+
+  .jwt-decoder__textarea { @apply text-xs p-2; }
+  .jwt-decoder__preview { @apply text-[10px] p-2; }
+  .jwt-decoder__panel { @apply p-3; }
+  .jwt-decoder__json { @apply text-[10px] p-2; }
+  .jwt-decoder__panel-title { @apply text-sm; }
+
+  .floating-chat__trigger { padding: 10px 16px; gap: 6px; }
+  .floating-chat__label { font-size: 0.75rem; }
+}
+
+/* ─── Phones (< 640px) ─── */
+@media (max-width: 639px) {
+  .section-title { font-size: 1.75rem !important; }
+  .section-subtitle { @apply text-sm; }
+  .section-header { @apply mb-10; }
+  .section-number { @apply text-[10px]; }
+
+  .byte-card { @apply p-4; }
+  .byte-card-large { @apply p-4 rounded-lg; }
+
+  /* Flow animation — stack actors 2x2 */
+  .flow-anim__actors { @apply grid-cols-2 gap-2; }
+  .flow-anim__actor { @apply p-3; }
+  .flow-anim__actor-icon { font-size: 1.25rem; }
+  .flow-anim__progress { @apply gap-1 flex-wrap; }
+  .flow-anim__progress-dot { @apply w-7 h-7 text-[10px]; }
+  .flow-anim__timeline { @apply gap-0; }
+  .flow-anim__timeline-label { max-width: 55px; font-size: 9px; }
+  .flow-anim__timeline-number { @apply w-6 h-6 text-[9px]; }
+  .flow-anim__detail { @apply p-4; }
+  .flow-anim__http { @apply p-2; }
+  .flow-anim__http pre { font-size: 0.7rem; }
+
+  /* Lifecycle — smaller nodes */
+  .lifecycle__timeline { @apply gap-0; }
+  .lifecycle__node { @apply px-2 py-1; }
+  .lifecycle__node-circle { @apply w-10 h-10 text-base; }
+  .lifecycle__node-label { font-size: 9px; max-width: 60px; }
+  .lifecycle__node-time { font-size: 8px; }
+  .lifecycle__connector { @apply w-4; right: -0.5rem; }
+  .lifecycle__detail { @apply p-4; }
+
+  /* Quiz — tighter */
+  .quiz__option { @apply p-3; }
+  .quiz__next-btn { @apply px-4 py-2.5 text-sm; }
+  .quiz__restart-btn { @apply px-4 py-2.5 text-sm; }
+
+  /* Code playground */
+  .code-playground__langs { @apply gap-1; }
+  .code-playground__lang { @apply px-3 py-2 text-xs; }
+  .code-playground__tabs { @apply gap-0; }
+  .code-playground__tab { @apply text-[10px] px-2 py-1.5; }
+  .code-playground__pre { @apply p-3; }
+  .code-playground__pre code { font-size: 0.75rem; }
+
+  /* JWT Decoder */
+  .jwt-decoder__textarea { @apply text-xs p-3; }
+  .jwt-decoder__preview { @apply text-xs p-3; }
+  .jwt-decoder__panel { @apply p-4; }
+  .jwt-decoder__json { @apply text-xs; }
+  .jwt-decoder__sig-display { @apply p-2; }
+
+  /* Glossary */
+  .glossary__search { @apply py-2 px-3; }
+  .glossary__categories { @apply gap-1; }
+  .glossary__cat-btn { @apply text-[10px] px-2 py-1; }
+
+  /* Security attack */
+  .flow-anim__controls button { @apply text-xs; }
+
+  /* Comparison table — force min-width on cells */
+  .comparison-table { font-size: 0.75rem; }
+  .comparison-table th,
+  .comparison-table td { padding: 0.5rem; }
+
+  /* Chatbot — force full-width on mobile */
+  .floating-chat__panel {
+    width: calc(100vw - 1rem) !important;
+    right: 0.5rem !important;
+    bottom: 5rem !important;
+    height: calc(100vh - 6rem) !important;
+  }
+  .floating-chat__panel.expanded {
+    width: calc(100vw - 0.5rem) !important;
+    height: calc(100vh - 1rem) !important;
+    border-radius: 0.75rem !important;
+  }
+  .floating-chat__trigger { padding: 12px 18px; }
+  .floating-chat__label { font-size: 0.8rem; }
+}
+
+/* ─── Tablets portrait (640px - 767px) ─── */
+@media (min-width: 640px) and (max-width: 767px) {
+  .section-title { font-size: 2rem !important; }
+  .byte-card-large { @apply p-6; }
+
+  .flow-anim__actors { @apply grid-cols-2; }
+  .lifecycle__timeline { @apply gap-1; }
+  .lifecycle__connector { @apply w-5; right: -0.65rem; }
+}
+
+/* ─── Tablets landscape / small laptops (768px - 1023px) ─── */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .section-title { font-size: 2.5rem !important; }
+
+  .flow-anim__actors { @apply grid-cols-4; }
+  .lifecycle__node-circle { @apply w-11 h-11; }
+}
+
+/* ─── Desktop content when sidebar is showing (≥ 1024px) ─── */
+@media (min-width: 1024px) {
+  .section-title { font-size: 2.75rem; }
+}
+
+/* ─── Extra large screens (≥ 1440px) ─── */
+@media (min-width: 1440px) {
+  .section-title { font-size: 3rem; }
+}
+
 /* ======= GENERAL OVERRIDES ======= */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }

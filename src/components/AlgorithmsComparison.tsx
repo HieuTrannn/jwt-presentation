@@ -61,7 +61,7 @@ export default function AlgorithmsComparison() {
   return (
     <div className="space-y-8">
       {/* Selector */}
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
         {ALGORITHMS.map((a, i) => (
           <button
             key={a.name}
