@@ -4,6 +4,9 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Chapter 06 - JWT Authentication Flow | PRN232',
   description: 'Implement Security in RESTful Web Service - JWT Authentication Flow - ByteByteGo Style',
+  icons: {
+    icon: '/icon.png',
+  },
 }
 
 export default function RootLayout({
